@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  .obrazek {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .obrazek::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .obrazek img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+  
+  .czarny-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .czarny-div .tekst {
+    width: 70%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .elo {
+    position: relative;
+  }
+  
+  .elo img {
+    position: absolute;
+    top: 0;
+    left: 1150px;
+    width: 350px;
+    height: 350px;
+    z-index: 999;
+  }
+  
+  .elo1 {
+    position: relative;
+  }
+  
+  .elo1 img {
+    position: absolute;
+    top: 0;
+    left: 370px;
+    width: 350px;
+    height: 350px;
+    z-index: 999;
+  }
+  
+  .logo {
+    margin-top: 10px;
+    font-size: 100px;
+    font-weight: bold;
+    color: wheat;
+    position: relative;
+    animation: slide-down 1s;
+  }
+  
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+  #pojawiajacy-sie-przycisk {
+    position: fixed;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pojawienie 1s ease-out 1s forwards;
+    border: lightslategray outset 5px;
+    z-index: 999;
+  }
+  
+  #pojawiajacy-sie-przycisk a {
+    display: block;
+    width: 600px;
+    height: 160px;
+    background-color: goldenrod;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 160px;
+    text-decoration: none;
+  }
+  
+  @keyframes pojawienie {
+    to {
+      bottom: 200px;
+    }
+  }
